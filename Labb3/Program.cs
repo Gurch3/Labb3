@@ -121,8 +121,9 @@ void PrintTranslations(string[] translations)
 {
     foreach (string word in translations)
     {
-        Console.Write(word);
+        Console.Write(word + " ");
     }
+    Console.WriteLine();
 }
 
 void AddWordsLoop(WordList list)
@@ -159,14 +160,15 @@ void AddWordsLoop(WordList list)
 void PracticeWords()
 {
     WordList practiceList = GetList();
-    Word practiceWord = practiceList.GetWordToPractice();
-    int from = practiceWord.FromLanguage;
-    int to = practiceWord.ToLanguage;
+    
     int totalCount = 0;
     int correctCount = 0;
     string result = "0";
     while (result != "")
     {
+        Word practiceWord = practiceList.GetWordToPractice();
+        int from = practiceWord.FromLanguage;
+        int to = practiceWord.ToLanguage;
         Console.WriteLine($"Translate {practiceWord.Translations[from]} to language {practiceList.Languages[to]}");
         result = Console.ReadLine();
 
@@ -181,6 +183,7 @@ void PracticeWords()
             Console.WriteLine("Answer was wrong");
             totalCount++;
         }
+        practiceWord = practiceList.GetWordToPractice();
     }
     Console.WriteLine($"You have practiced {totalCount} words and answered {correctCount} of them correctly");
 }
@@ -188,15 +191,17 @@ void PracticeWords()
 int FindLanguage(WordList findLang)
 {
     int foundLanguage = -1;
+    int testLanguage = int.Parse(args[2]);
     for (int findLanguage = 0; findLanguage < findLang.Languages.Length; findLanguage++)
     {
-        if (args[2] == findLang.Languages[findLanguage])
+        if (testLanguage == findLanguage)
         {
             foundLanguage = findLanguage;
+            
         }
     }
-
     return foundLanguage;
+
 
 }
 WordList GetList()

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "WinFormsLabb3": {
+      "commandName": "Project",
+      "commandLineArgs": "-words lang3 1"
+    }
+  }
+}

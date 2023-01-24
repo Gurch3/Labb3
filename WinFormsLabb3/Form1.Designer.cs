@@ -36,14 +36,14 @@
             this.buttonCount = new System.Windows.Forms.Button();
             this.buttonSort = new System.Windows.Forms.Button();
             this.buttonPractice = new System.Windows.Forms.Button();
+            this.labelInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 21);
-            this.textBox1.Multiline = true;
+            this.textBox1.Location = new System.Drawing.Point(82, 73);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(754, 62);
+            this.textBox1.Size = new System.Drawing.Size(632, 31);
             this.textBox1.TabIndex = 0;
             // 
             // lists
@@ -53,7 +53,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lists.Location = new System.Drawing.Point(82, 308);
             this.lists.Name = "lists";
-            this.lists.Size = new System.Drawing.Size(112, 34);
+            this.lists.Size = new System.Drawing.Size(141, 41);
             this.lists.TabIndex = 1;
             this.lists.Text = "lists";
             this.lists.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonNew.Location = new System.Drawing.Point(248, 308);
             this.buttonNew.Name = "buttonNew";
-            this.buttonNew.Size = new System.Drawing.Size(112, 34);
+            this.buttonNew.Size = new System.Drawing.Size(141, 41);
             this.buttonNew.TabIndex = 2;
             this.buttonNew.Text = "new";
             this.buttonNew.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAdd.Location = new System.Drawing.Point(406, 308);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(112, 34);
+            this.buttonAdd.Size = new System.Drawing.Size(141, 41);
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonRemoveWord.Location = new System.Drawing.Point(573, 308);
             this.buttonRemoveWord.Name = "buttonRemoveWord";
-            this.buttonRemoveWord.Size = new System.Drawing.Size(112, 34);
+            this.buttonRemoveWord.Size = new System.Drawing.Size(141, 41);
             this.buttonRemoveWord.TabIndex = 4;
             this.buttonRemoveWord.Text = "remove";
             this.buttonRemoveWord.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCount.Location = new System.Drawing.Point(133, 373);
             this.buttonCount.Name = "buttonCount";
-            this.buttonCount.Size = new System.Drawing.Size(112, 34);
+            this.buttonCount.Size = new System.Drawing.Size(141, 41);
             this.buttonCount.TabIndex = 5;
             this.buttonCount.Text = "count";
             this.buttonCount.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSort.Location = new System.Drawing.Point(315, 373);
             this.buttonSort.Name = "buttonSort";
-            this.buttonSort.Size = new System.Drawing.Size(112, 34);
+            this.buttonSort.Size = new System.Drawing.Size(141, 41);
             this.buttonSort.TabIndex = 6;
             this.buttonSort.Text = "sort";
             this.buttonSort.UseVisualStyleBackColor = true;
@@ -131,17 +131,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPractice.Location = new System.Drawing.Point(488, 373);
             this.buttonPractice.Name = "buttonPractice";
-            this.buttonPractice.Size = new System.Drawing.Size(112, 34);
+            this.buttonPractice.Size = new System.Drawing.Size(141, 41);
             this.buttonPractice.TabIndex = 7;
             this.buttonPractice.Text = "practice";
             this.buttonPractice.UseVisualStyleBackColor = true;
             this.buttonPractice.Click += new System.EventHandler(this.buttonPractice_Click);
             // 
+            // labelInfo
+            // 
+            this.labelInfo.AutoSize = true;
+            this.labelInfo.Location = new System.Drawing.Point(107, 132);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(578, 25);
+            this.labelInfo.TabIndex = 8;
+            this.labelInfo.Text = "For lists command enter nothing otherwise enter list name into text box";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(829, 457);
+            this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.buttonPractice);
             this.Controls.Add(this.buttonSort);
             this.Controls.Add(this.buttonCount);
@@ -167,5 +177,6 @@
         private Button buttonCount;
         private Button buttonSort;
         private Button buttonPractice;
+        private Label labelInfo;
     }
 }

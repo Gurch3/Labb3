@@ -54,7 +54,7 @@
             // 
             // buttonSubmit
             // 
-            this.buttonSubmit.Location = new System.Drawing.Point(408, 197);
+            this.buttonSubmit.Location = new System.Drawing.Point(418, 254);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(112, 34);
             this.buttonSubmit.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(554, 197);
+            this.buttonCancel.Location = new System.Drawing.Point(558, 254);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(112, 34);
             this.buttonCancel.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 256);
+            this.ClientSize = new System.Drawing.Size(699, 316);
             this.Controls.Add(this.labelGuesses);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSubmit);
@@ -92,6 +92,7 @@
             this.Controls.Add(this.labelTranslate);
             this.Name = "practiceForm";
             this.Text = "practiceForm";
+            this.Load += new System.EventHandler(this.practiceForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -20,7 +20,9 @@ namespace WinFormsLabb3
         public practiceForm(WordList wordList)
         {
             practiceList = wordList;
+            
             InitializeComponent();
+            PracticeWord(practiceList);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace WinFormsLabb3
             Word practiceWord = practiceList.GetWordToPractice();   
             int from = practiceWord.FromLanguage;
             int to = practiceWord.ToLanguage;
-            labelTranslate.Text = labelTranslate.Text + " " + practiceWord.Translations[from] + "to language: " + practiceList.Languages[to];
+            labelTranslate.Text = labelTranslate.Text + " " + practiceWord.Translations[from] + " to language: " + practiceList.Languages[to];
             testResult = practiceWord.Translations[to];
 
         }
@@ -52,13 +54,19 @@ namespace WinFormsLabb3
                 MessageBox.Show(message);
                 totalCount++;
             }
-            labelGuesses.Text = "You have answered:" + totalCount.ToString() + "in total and correctly answered" + correctCount.ToString() + "Correctly";
+            labelGuesses.Text = "You have answered:" + totalCount.ToString() + " in total and answered " + correctCount.ToString() + " Correctly";
+            labelTranslate.Text = "Traslate: ";
             PracticeWord(practiceList);
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void practiceForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

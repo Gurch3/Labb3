@@ -16,15 +16,19 @@ namespace WinFormsLabb3
         private WordList sortList;
         public sortForm(WordList wordList)
         {
+            InitializeComponent();
             sortList = wordList;
             LabelListLang(sortList);
-            InitializeComponent();
         }
 
         private string LabelListLang(WordList sortList)
         {
+            //foreach (string lang in sortList.Languages)
+            //{
+            //    labelListLanguages.Text = labelListLanguages.Text + " " + lang;
 
-            for (int i = 0; i < sortList.Languages.Length; i++)
+        //}
+            for (int i = 0; i<sortList.Languages.Length; i++)
             {
                 labelListLanguages.Text = labelListLanguages.Text + " " + i + "." + sortList.Languages[i];
 
@@ -48,13 +52,15 @@ namespace WinFormsLabb3
 
         void PrintTranslations(string[] translations)
         {
-            string message = "Sorted list";
+            
             foreach (string word in translations)
             {
-                message = message + " , " + word;
+                textBox1.Text = textBox1.Text + " " + word;
+                textBox1.Text.Trim();
 
             }
-            MessageBox.Show(message);
+            textBox1.Text += Environment.NewLine;
+            
         }
     }
 }

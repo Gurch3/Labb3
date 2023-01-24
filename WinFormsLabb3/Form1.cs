@@ -17,17 +17,11 @@ namespace WinFormsLabb3
 
         private void buttonNew_Click(object sender, EventArgs e)
         {
-            List<string> newList = textBox1.Text.Split(' ').ToList();
-            string listName = newList[0];
-            newList.RemoveAt(0);
+            string listName = textBox1.Text;
+           
             if (WordList.LoadList(listName) == null)
             {
-                if (newList.Count > 1)
-                {
-                    new WordList(listName, newList.ToArray());
-                    WordList addNew = WordList.LoadList(listName);
-                    new AddWordsForm(addNew).Show();
-                }
+                new NewListForm(listName).Show();
             }
             else textBox1.Text = "List already exists";
         }

@@ -34,6 +34,7 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.buttonCancel = new System.Windows.Forms.Button();
             this.numericUpDownLanguage = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLanguage)).BeginInit();
             this.SuspendLayout();
@@ -41,15 +42,16 @@
             // labelListLanguages
             // 
             this.labelListLanguages.AutoSize = true;
-            this.labelListLanguages.Location = new System.Drawing.Point(63, 75);
+            this.labelListLanguages.Location = new System.Drawing.Point(77, 47);
             this.labelListLanguages.Name = "labelListLanguages";
-            this.labelListLanguages.Size = new System.Drawing.Size(76, 25);
+            this.labelListLanguages.Size = new System.Drawing.Size(291, 25);
             this.labelListLanguages.TabIndex = 0;
-            this.labelListLanguages.Text = "Sort list:";
+            this.labelListLanguages.Text = "Sort list by one of these languages:";
             // 
             // buttonSort
             // 
-            this.buttonSort.Location = new System.Drawing.Point(345, 140);
+            this.buttonSort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSort.Location = new System.Drawing.Point(623, 561);
             this.buttonSort.Name = "buttonSort";
             this.buttonSort.Size = new System.Drawing.Size(112, 34);
             this.buttonSort.TabIndex = 1;
@@ -59,7 +61,8 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(463, 140);
+            this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancel.Location = new System.Drawing.Point(763, 561);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(112, 34);
             this.buttonCancel.TabIndex = 2;
@@ -69,7 +72,8 @@
             // 
             // numericUpDownLanguage
             // 
-            this.numericUpDownLanguage.Location = new System.Drawing.Point(77, 140);
+            this.numericUpDownLanguage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.numericUpDownLanguage.Location = new System.Drawing.Point(77, 564);
             this.numericUpDownLanguage.Maximum = new decimal(new int[] {
             10,
             0,
@@ -79,11 +83,20 @@
             this.numericUpDownLanguage.Size = new System.Drawing.Size(180, 31);
             this.numericUpDownLanguage.TabIndex = 3;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(77, 92);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(624, 389);
+            this.textBox1.TabIndex = 4;
+            // 
             // sortForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 200);
+            this.ClientSize = new System.Drawing.Size(924, 624);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.numericUpDownLanguage);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSort);
@@ -104,5 +117,6 @@
         private BindingSource bindingSource1;
         private Button buttonCancel;
         private NumericUpDown numericUpDownLanguage;
+        private TextBox textBox1;
     }
 }
